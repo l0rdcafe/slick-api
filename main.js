@@ -1,13 +1,24 @@
 var slider = (function () {
   var getSlick = function (cssSelect) {
     $(cssSelect).slick({
-      autoplay: true,
+      arrows: false,
+      adaptiveHeight: true,
       dots: true,
+      autoplay: true,
       infinite: true,
       fade: true,
+      lazyLoad: 'progressive',
       cssEase: 'linear',
-      mobileFirst: true,
-      lazyLoad: 'progressive'
+
+      responsive: [{
+        breakpoint: 600,
+        settings: {
+          arrows: false,
+          autoplay: false,
+          adaptiveHeight: true,
+          dots: true
+        }
+      }]
     });
   };
 
