@@ -1,5 +1,5 @@
 var slider = (function () {
-  var getSlick = function (cssSelect) {
+  var addSlick = function (cssSelect) {
     $(cssSelect).slick({
       arrows: false,
       adaptiveHeight: true,
@@ -13,19 +13,16 @@ var slider = (function () {
       responsive: [{
         breakpoint: 600,
         settings: {
-          arrows: false,
-          autoplay: false,
-          adaptiveHeight: true,
-          dots: true
+          autoplay: false
         }
       }]
     });
   };
 
   return {
-    getSlick: getSlick
+    addSlick: addSlick
   };
 }());
 
 
-slider.getSlick('#img-wrapper');
+slider.addSlick('#img-wrapper');
